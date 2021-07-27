@@ -40,7 +40,7 @@ const slideShow = function () {
 slideShow();
 
 //更新情報
-$(function()
+$(function() {
 	$.ajax({
 		url: 'news/index.html' //読み込むファイルを指定
 	})
