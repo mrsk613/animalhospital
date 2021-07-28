@@ -43,6 +43,9 @@ slideShow();
 $(function() {
 	$.ajax({
 		url: 'news/index.html' //読み込むファイルを指定
+		cache: false,
+		async: false,
+		dataType: 'html',
 	})
 	.then(
 		// 通信成功時の処理
