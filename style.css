@@ -306,57 +306,55 @@ h3{
 }
 
 dl::after {
-	content: "";
-	display: block;
-	clear: both;
+	content: "";!important
+	display: block;!important
+	clear: both;!important
 }
 
 dt,dd {
-	padding: 5px;
-	font-size:1.5rem;
-	border-top: 1px dotted #ccc;
-	box-sizing: border-box;
-	line-height: 1.5;
-	float: left;
+	padding: 5px;!important
+	font-size:1.5rem;!important
+	border-top: 1px dotted #ccc;!important
+	box-sizing: border-box;!important
+	line-height: 1.5;!important
+	float: left;!important
 }
 
 dt:first-of-type,
 dd:first-of-type {
-	border: 0;
+	border: 0;!important
 }
 
 dt {
-	width: 10em;
-	font-weight: bold;
-	text-align:center;
+	width: 10em;!important
+	font-weight: bold;!important
+	text-align:center;!important
 }
 
 dd {
-	width: -webkit-calc(100% - 10em);
-	width: calc(100% - 10em);
+	width: -webkit-calc(100% - 10em);!important
+	width: calc(100% - 10em);!important
 }
 
-#newsbox .r{
-	display:inline-block;
-	width:10%;
-	background:red;
-	color:#FFF;
-	font-weight: bold;
-	text-align: center;
+.r{
+	display:inline-block;!important
+	width:10%;!important
+	background:red;!important
+	color:#FFF;!important
+	font-weight: bold;!important
+	text-align: center;!important
 }
 
-#newsbox .y{
-	display:inline-block;
-	width:10%;
-	background:#FFEF65;
-	font-weight: bold;
-	text-align: center;
+.y{
+	display:inline-block;!important
+	width:10%;!important
+	background:#FFEF65;!important
+	font-weight: bold;!important
+	text-align: center;!important
 }
 
-#newsbox .title{
-	display:inline-block;
-	width:78%;
-	padding-left: 8px;
+.title{
+	padding-left: 8px;!important
 }
 
 .selection {
