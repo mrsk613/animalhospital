@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>たなか動物病院</title>
+</head>
+
+<body>
+    <header class="top">
+		<div class="logo"><a href="index.html"><img src="image/logo.png" alt="田中どうぶつ病院" /></a></div>
+    </header>
+    <main class="clear">
+          <div class="contact yobou">
+			  <p class="contact-ttl">予約フォーム</p>
+			  <table class="type-01">
+				    <tr>
+						<th class="contact-item">希望日にち</th>
+						<td class="contact-body"><input type="date" name="希望日にち" class="date" required></td>
+				  </tr>
+				  <tr>
+						<th class="contact-item">時間</th>
+						<td class="contact-body"><input type="time" name="時間" min="09:00" max="19:50" step="300" class="time" required></td>
+				  </tr>
+				   <tr>
+						<th class="contact-item">飼い主様のお名前</th>
+						<td class="contact-body"><input type="text" name="飼い主様のお名前" class="form-text" /></td>
+				  </tr>
+				   <tr>
+						<th class="contact-item">メールアドレス</th>
+						<td class="contact-body"><input type="email" name="メールアドレス" class="form-text" /></td>
+				  </tr>
+				   <tr>
+						<th class="contact-item">電話番号</th>
+						<td class="contact-body"><input type="tel" name="電話番号" class="form-text" /></td>
+				  </tr>
+				   <tr>
+						<th class="contact-item">ペットの種類</th>
+						<td class="contact-body"><input type="tel" name="ペットの種類" class="form-text" /></td>
+				  </tr>
+				   <tr>
+						<th class="contact-item">ペットのお名前</th>
+						<td class="contact-body"><input type="tel" name="ペットのお名前" class="form-text" /></td>
+				  </tr>
+				   <tr>
+						<th class="contact-item">診察番号（再診の場合）</th>
+						<td class="contact-body"><input type="tel" name="診察番号" class="form-text" /></td>
+				  </tr>
+				   <tr>
+						<th class="contact-item">診察・質問事項</th>
+						<td class="contact-body"><textarea name="診察・質問事項" class="form-textarea"></textarea></td>
+				  </tr>
+			  </table>
+			  <input class="contact-submit" type="submit" value="送信" />
+		</div>
+    </main>
+    <script src="js/main.js"></script>
+	
+</body>
+
+</html>
