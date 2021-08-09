@@ -53,4 +53,4 @@ $(function() {
 			});
 			$('dl dt:gt(4), dl dd:gt(4)').remove(); //2件目以降の dt,dd を削除
 		});
-})
+});
