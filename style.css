@@ -1,4 +1,6 @@
-/*共通*/
+/* ------------------------------------
+   共通
+   ------------------------------------*/
 *{
     margin: 0;
     padding: 0;
@@ -180,7 +182,25 @@ ul{
 	font-weight: bold;
 }
 
-/*上に戻るボタン*/
+@media screen and (max-width: 1300px){
+	h1{
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 640px){
+	.box-2{
+		width: 100%;
+	}
+	
+	.box-3{
+		width: 45%;
+	}
+}
+
+/* ------------------------------------
+   上に戻るボタン
+   ------------------------------------*/
 #page_top{
   width: 50px;
   height: 50px;
@@ -216,7 +236,9 @@ ul{
   text-align: center;
 }
 
-/*TOP header*/
+/* ------------------------------------
+   TOP header
+   ------------------------------------*/
 .top{
 	width: 100%;
 }
@@ -235,6 +257,7 @@ ul{
 }
 
 .yoyaku_button{
+	display:block;
 	float: right;
 	width: 150px;
 	background-color: #26C6DA;
@@ -257,6 +280,7 @@ ul{
 }
 
 .nav {
+	display: block;
 	width:100%;
 	clear: both;
 	text-align: center;
@@ -299,9 +323,148 @@ ul{
 
 .nav .here a{
 	color: #26C6DA;
+	padding:0;
 }
 
-/*slidshow*/
+
+
+@media screen and (max-width: 980px){
+	.logo{
+		width: 30%;
+	}
+	
+	.con980{
+		width:95%;
+		margin: 0 auto;
+	}
+	
+	.nav a{
+		font-size:1.2rem;
+	}
+	
+	.yoyaku_button{
+		width:100px;
+		font-size:2rem;
+	}
+}
+
+@media screen and (max-width: 640px){
+	
+	.nav{
+		display: none;
+	}
+	
+	.yoyaku_button{
+		display: none;
+	}
+	
+}
+
+/*---------------------
+  ハンバーガーメニュー
+  ---------------------*/
+.hamburger-menu{
+	display:none;
+}
+
+@media screen and (max-width: 640px){	
+	.hamburger-menu{
+	display: block;
+}
+	.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #3584bb;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+
+#menu-btn-check:checked ~ .menu-content {
+    left: 0;/*メニューを画面内へ*/
+}
+
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+    display: none;
+}
+
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    background-color: #3584bb;
+    transition: all 0.5s;
+}
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+.menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+	
+}
+
+/* ------------------------------------
+   slidshow
+   ------------------------------------*/
 .slideShow {
 	clear: both;
     position: relative;
@@ -370,7 +533,9 @@ ul{
     transform: rotate( -90deg ) scale( 1.1 );
 }
 
-/*TOP banner*/
+/* ------------------------------------
+   TOP banner
+   ------------------------------------*/
 #banner img{
 	width:30%;
 }
@@ -401,7 +566,9 @@ ul{
 	opacity: 0.7;
 }
 
-/*newsbox*/
+/* ------------------------------------
+   newsbox
+   ------------------------------------*/
 #newsbox{
 	clear: both;
 	margin-top:20px;
@@ -469,7 +636,30 @@ dd {
 	display: block;
 }
 
-/*footer*/
+@media screen and (max-width: 700px){
+	dt,dd{
+		float: none;
+		border-top: none;
+		width:100%;
+	}
+	
+	dd{
+		border-bottom: 1px dotted #ccc;
+	}
+	
+	dt{
+		text-align: left;
+	}
+	
+	.r,.y{
+		width: 15%;
+	}
+	
+}
+
+/* ------------------------------------
+   footer
+   ------------------------------------*/
 footer{
 	background:#707070;
 	width:100%;
@@ -540,35 +730,37 @@ footer p{
 }
 
 
-/*tab切替*/
+/* ------------------------------------
+   tab切替
+   ------------------------------------*/
 .tab-wrap{
-  display: flex;
-  flex-wrap: wrap;
-  margin:20px 0;
+	display: flex;
+	flex-wrap: wrap;
+	margin:20px 0;
 }
 .tab-wrap:after {
-  content: '';
-  width: 100%;
-  height: 3px;
-  background: #26C6DA;
-  display: block;
-  order: -1;
+	content: '';
+	width: 100%;
+	height: 3px;
+	background: #26C6DA;
+	display: block;
+	order: -1;
 }
 .tab-label {
 	color: White;
 	font-size:1.4rem;
-  background: LightGray;
-  font-weight: bold;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
-  white-space: nowrap;
-  text-align: center;
-  padding: 10px .5em;
-  order: -1;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-  border-radius: 5px 5px 0 0;
-  flex: 1;
+	background: LightGray;
+	font-weight: bold;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+	white-space: nowrap;
+	text-align: center;
+	padding: 10px .5em;
+	order: -1;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+	border-radius: 5px 5px 0 0;
+	flex: 1;
 }
 .tab-label:not(:last-of-type) {
   margin-right: 5px;
@@ -596,7 +788,9 @@ footer p{
   display: none;
 }
 
-/*フロー*/
+/* ------------------------------------
+   フロー
+   ------------------------------------*/
 ol.Speech{
   counter-reset:list;
   list-style-type:none;
@@ -654,7 +848,9 @@ ol.Speech p{
 	margin-bottom: 20px;
 }
 
-/*schedule*/
+/* ------------------------------------
+    schedule
+   ------------------------------------*/
 
 .schedule table {
 	text-align: center;
@@ -705,6 +901,9 @@ ol.Speech p{
 }
  
 @media screen and (max-width: 640px) {
+	.schedule table{
+		width: 100%;
+	}
   .last td:last-child {
     border-bottom: solid 1px #ccc;
     width: 100%;
@@ -720,7 +919,9 @@ ol.Speech p{
   }
 }
 
-/*yoyaku*/
+/* ------------------------------------
+    yoyaku
+   ------------------------------------*/
 .contact {
   width: 980px;
   margin: 0 auto;
@@ -781,4 +982,10 @@ ol.Speech p{
   -webkit-appearance: none;
   -moz-appearance: none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 980px){
+	.contact{
+		width: 95%;
+	}
 }
