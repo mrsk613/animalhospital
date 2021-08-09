@@ -381,7 +381,7 @@ ul{
     justify-content: center;
     align-items: center;
     z-index: 90;
-    background-color: #3584bb;
+    background-color: #26C6DA;
 }
 .menu-btn span,
 .menu-btn span:before,
@@ -428,7 +428,7 @@ ul{
     top: 0;
     left: 100%;
     z-index: 80;
-    background-color: #3584bb;
+    background-color: #26C6DA;
     transition: all 0.5s;
 }
 .menu-content ul {
